@@ -12,6 +12,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const pokemonsList = JSON.parse(fs.readFileSync(path.join(__dirname, './data/pokemons.json'), 'utf8'));
 
+// Création de l'application Express
 const app = express();
 const PORT = 3000;
 
@@ -29,27 +30,10 @@ app.use(express.json());
 app.use("/assets", express.static(path.join(__dirname, "../assets")));
 
 // Route GET de base
+// req : requête de l'utilisateur
+// res : réponse du serveur, répondre à l'utilisateur
 app.get("/api/pokemons", (req, res) => {
   res.status(200).send({
-    types: [
-      "fire",
-      "water",
-      "grass",
-      "electric",
-      "ice",
-      "fighting",
-      "poison",
-      "ground",
-      "flying",
-      "psychic",
-      "bug",
-      "rock",
-      "ghost",
-      "dragon",
-      "dark",
-      "steel",
-      "fairy",
-    ],
     pokemons: pokemonsList,
   });
 });
