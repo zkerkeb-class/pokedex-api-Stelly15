@@ -10,11 +10,28 @@
     "generate-pokemons": "node src/data/generatePokemonsJson.js"
   },
   "dependencies": {
+    "axios": "^1.7.9",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
-    "express": "^4.18.2"
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.13.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
-  }
+    "nodemon": "^3.1.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zkerkeb-class/pokedex-api-Stelly15.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zkerkeb-class/pokedex-api-Stelly15/issues"
+  },
+  "homepage": "https://github.com/zkerkeb-class/pokedex-api-Stelly15#readme"
 }
