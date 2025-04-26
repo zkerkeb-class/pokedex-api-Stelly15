@@ -1,6 +1,9 @@
+// Un schéma mongoose pour les utilisateurs
 import mongoose from 'mongoose';
+// Nous utilisons bcript pour hasher les mots de passe
 import bcrypt from 'bcrypt';
 
+//Nous définissons les propriétés de notre schéma utilisateur
 const userSchema = new mongoose.Schema({
   username: {
     type: String,
@@ -16,7 +19,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     enum: ['admin', 'user'],
     default: 'user'
-  }
+  },
+  favorites: { type: [Number], default: [] }, // Champ favorites
+  monDeck: { type: [Number], default: [] },
 });
 
 // Middleware pour hasher le mot de passe avant de sauvegarder

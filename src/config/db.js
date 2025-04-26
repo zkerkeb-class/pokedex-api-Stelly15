@@ -1,9 +1,11 @@
- // Gérer la connexion à MongoDB
+ // Gestion de la connexion à MongoDB
 
 import mongoose from 'mongoose';
 
 const connectDB = async () => {
   try {
+    // Connexion établit à MongoDB avec l'URI spécifié dans les variables d'environnement
+    // et le nom de la base de données 'pokemon'
     const conn = await mongoose.connect(process.env.MONGODB_URI, {
       dbName: 'pokemon'
     });
